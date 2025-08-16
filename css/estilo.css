@@ -1,0 +1,80 @@
+/*--------------------------------- index.html configurações css ---------------------------------------------------------------------------------------*/
+
+nav > ul {
+    list-style: none;
+}
+
+.layout-index {
+    margin-left: -9vh;
+    padding-left: 1%;
+    padding-right: 73%;
+    margin-top: -6vh;
+    width: 100%;
+    height: auto;
+}
+
+.layout-index header {
+    display: flex;
+    align-items: center;
+    margin-top: 2%;
+}
+
+.layout-index img { /* Esta propriedade é para o logo do site, a imagem do bloco de notas */
+    margin-right: 60%;
+    width: 20vh;
+    height: auto; 
+}
+
+.layout-index h1 {
+    border-radius: 49px;
+    border: 2px solid black;
+    padding: 10px;
+    margin-left: -1%;
+}
+
+.rodape-index {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: rgb(247, 235, 235);
+    width: 100%; 
+    bottom: 0; 
+    left: 0; 
+    margin: 0;
+    position: fixed;
+    z-index: 1000; 
+    /* 
+        Descrição para tirar dúvidas quanto as configurações desse elemento: "Key characteristics of position: fixed;:
+        Viewpoint-relative positioning:
+        The element's position is determined by its distance from the edges of the browser window (viewport), using properties like top, right, bottom, and left." 
+    */
+}
+
+.rodape-index a {
+    margin-right: 2%;
+}
+
+.introducao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+}
+
+.introducao main p{
+    margin-top: 30%;
+}
+
+a button{
+    width: 40vh;
+    height: 8vh;  
+}
+
+a button:hover {
+    background-color: black;
+    color: white;
+}
+
+/*-------------------------------------------------------------------------------------------*/
