@@ -1,3 +1,11 @@
+/* 
+    Aviso Importante:
+    - Sempre confira se o seletor CSS corresponde à classe usada no HTML.
+    - Alguns seletores deste arquivo são reaproveitados em mais de uma página (.html).
+    - Há classes em comum entre diferentes arquivos HTML, então alterações podem afetar
+    mais de um layout.
+*/
+
 /*--------------------------------- index.html configurações css ---------------------------------------------------------------------------------------*/
 
 nav > ul {
