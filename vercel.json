@@ -1,6 +1,6 @@
 {
   "functions": {
-    "api/pexels/images.js": {
+    "api/pexels.js": {
       "runtime": "@vercel/node@18.x"
     }
   }
