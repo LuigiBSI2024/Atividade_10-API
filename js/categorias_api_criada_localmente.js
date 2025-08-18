@@ -8,6 +8,8 @@ let categories = [
     "Arquitetura"
 ];
 
+export const categories_para_o_main = categories;
+
 export default function handler(req, res) {
     if (req.method === "GET") {
         // Retorna todas as categorias

@@ -1,4 +1,4 @@
-import { categories } from './categorias_api_criada_localmente.js';
+import { categories_para_o_main } from './categorias_api_criada_localmente.js';
 
 async function fetchImages(query, perPage = 8) {
     try {
@@ -82,8 +82,8 @@ async function categoriasImagens() {
   
   let query;
 
-  for(let i = 0; i < categories.length; i++){
-    query = categories[i]
+  for(let i = 0; i < categories_para_o_main.length; i++){
+    query = categories_para_o_main[i]
   }
   try {
     const data = await fetchImages(query, 8);
