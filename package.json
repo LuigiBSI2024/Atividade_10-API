@@ -1,0 +1,47 @@
+package.json
+Código 
+Opção 2: Converter APIs para CommonJS
+
+APIs em CommonJS
+Código 
+Recomendação: Use a Opção 1
+Crie o arquivo package.json na raiz do projeto com "type": "module". Isso é mais moderno e permite continuar usando a sintaxe ES6.
+
+Estrutura final:
+projeto/
+├── index.html
+├── package.json        ← NOVO arquivo
+├── vercel.json
+├── css/
+├── images/  
+├── Site-secoes/
+├── js/
+└── api/
+    ├── categorias.js   (mantém export default)
+    └── pexels.js       (mantém export default)
+Passos para resolver:
+Crie o arquivo package.json na raiz com o conteúdo acima
+Mantenha seus arquivos de API com export default
+Configure a variável PEXELS_API_KEY no Vercel
+Faça commit e push
+O package.json com "type": "module" vai resolver o warning e fazer suas APIs funcionarem corretamente no Vercel!
+
+
+
+
+
+
+
+
+{
+  "name": "notemages",
+  "version": "1.0.0",
+  "description": "Bloco de notas com imagens ilustrativas",
+  "type": "module",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'Build complete'"
+  },
+  "author": "Luigi Aranha de Andrade",
+  "license": "MIT"
+}
