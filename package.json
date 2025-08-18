@@ -1,12 +1,5 @@
 {
   "name": "notemages",
   "version": "1.0.0",
-  "description": "Bloco de notas com imagens ilustrativas",
-  "type": "module",
-  "scripts": {
-    "dev": "vercel dev",
-    "build": "echo 'Build complete'"
-  },
-  "author": "Luigi Aranha de Andrade",
-  "license": "MIT"
+  "type": "module"
 }
