@@ -82,19 +82,19 @@ async function categoriasImagens() {
   
   let query;
 
-  for(let i = 0; i < categories.lenght; i++){
+  for(let i = 0; i < categories.length; i++){
     query = categories[i]
-
-    try {
-      const data = await fetchImages(query, 8);
-      displayImages(data.photos, 'combinar_APIs');
-    } 
-    
-    catch (error) {
-      console.error("Erro ao carregar bebidas:", error);
-      displayError('combinar_APIs', error);
-    }
   }
+  try {
+    const data = await fetchImages(query, 8);
+    displayImages(data.photos, 'combinar_APIs');
+  } 
+  
+  catch (error) {
+    console.error("Erro ao carregar bebidas:", error);
+    displayError('combinar_APIs', error);
+  }
+
 }
 
 // ========== INICIALIZAÇÃO ==========
