@@ -7,8 +7,8 @@ nav > ul {
 .layout-index {
     margin-left: -9vh;
     padding-left: 1%;
-    padding-right: 73%;
-    margin-top: -6vh;
+    padding-right: 3%;
+    margin-top: -9vh;
     width: 100%;
     height: auto;
 }
@@ -20,7 +20,6 @@ nav > ul {
 }
 
 .layout-index img { /* Esta propriedade é para o logo do site, a imagem do bloco de notas */
-    margin-right: 60%;
     width: 20vh;
     height: auto; 
 }
@@ -51,10 +50,6 @@ nav > ul {
     */
 }
 
-.rodape-index a {
-    margin-right: 2%;
-}
-
 .introducao {
     display: flex;
     align-items: center;
@@ -78,3 +73,30 @@ a button:hover {
 }
 
 /*-------------------------------------------------------------------------------------------*/
+
+/* Configurações Globais */
+.icone_sobre {
+    position: fixed;
+    left: 202vh;
+    bottom: 18vh;
+}
+
+.icone_sobre img{
+    width: 6vh;
+    height: auto;
+}
+
+.caixa_icone_sobre {
+    width: auto;
+    height: auto;
+    display: flexbox;
+    background-color: red;
+}
+/* Delimitação de configuração Globais */
+
+
+/*--------------------------------- sobre.html configurações css ---------------------------------------------------------------------------------------*/
+
+
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------------*/
