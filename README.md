@@ -27,3 +27,6 @@ Será um site onde uma API desempenhará a maior parte das operações, o site e
 
 ## Créditos
 - A API utilizada está localizada nesse endereço: https://restful-api.dev/
+
+- Ícone de info criado por Freepick: https://www.flaticon.com/free-icons/info
+
