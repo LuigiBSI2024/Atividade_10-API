@@ -1,15 +1,14 @@
 import { categories_para_o_main } from '../api/categorias_api_criada_localmente.js';
+import { handler } from '../api/pexels.js';
 
 async function fetchImages(query, perPage = 8) {
   try {
-    const response = await fetch(`/api/pexels?query=${encodeURIComponent(query)}&per_page=${perPage}`);
-    
-    if (!response.ok) {
-      throw new Error("Erro na resposta da API");
-    }
+    let data = handler(res, query, perPage);
 
-    return await response.json();
-  } catch (error) {
+    return data;
+  } 
+  
+  catch (error) {
     console.error("Erro ao buscar imagens:", error);
     return { photos: [] };
   }
