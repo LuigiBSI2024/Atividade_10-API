@@ -90,11 +90,11 @@ async function categoriasImagens() {
 // ========== INICIALIZAÇÃO ==========
 
 document.addEventListener('DOMContentLoaded', function() {
-  console.log("DOM carregado, iniciando aplicação...");
+    console.log("DOM carregado, iniciando aplicação...");
   
   // Carregar imagens após um delay
-  setTimeout(() => {
-    categoriasImagens();
-  }, 1000);
-  
-}
+    setTimeout(() => {
+      categoriasImagens();
+    }, 1000);
+  }
+);
