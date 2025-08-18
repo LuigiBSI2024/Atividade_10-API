@@ -1,4 +1,4 @@
-import { categories_para_o_main } from '../js/categorias_api_criada_localmente.js';
+import { categories_para_o_main } from '../api/categorias_api_criada_localmente.js';
 
 async function fetchImages(query, perPage = 8) {
   try {
