@@ -20,10 +20,12 @@ Será um site onde uma API desempenhará a maior parte das operações, o site e
 - **API Externa** - [RESTFUL-API](https://restful-api.dev/)
 
 - Métodos que foram usados neste projeto (referentes à API externa)
-    | Método | Endpoint | Descricao | Status |
+    | Método | Endpoint | Descrição | Status |
     |--------|----------|-----------|--------|
-    | GET    |          |           |        |
-    | DELETE |          |           |        |
+    | GET    | `/api/categorias` | Retorna todas as categorias disponíveis | ✅ Implementado |
+    | POST   | `/api/categorias` | Adiciona nova categoria | ✅ Implementado |
+    | DELETE | `/api/categorias?name=categoria` | Remove categoria específica | ✅ Implementado |
+    | GET    | `/api/pexels?query=termo&per_page=8` | Busca imagens no Pexels | ✅ Implementado |
 
 ## Créditos
 - A API utilizada está localizada nesse endereço: https://restful-api.dev/
