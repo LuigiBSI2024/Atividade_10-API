@@ -1,5 +1,3 @@
-// api/categories.js
-
 // Banco de dados local em memória (reseta quando reinicia o servidor)
 let categories = [
     "Natureza",
