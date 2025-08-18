@@ -1,3 +1,5 @@
+import { categories } from './categorias_api_criada_localmente.js';
+
 async function fetchImages(query, perPage = 8) {
     try {
         const response = await fetch(`/api/pexels?query=${encodeURIComponent(query)}&per_page=${perPage}`);
@@ -78,12 +80,20 @@ function displayError(galleryId, error) {
 async function categoriasImagens() {
   console.log("Carregando imagens de bebidas...");
   
-  try {
-    const data = await fetchImages('soda', 8);
-    displayImages(data.photos, 'combinar_APIs');
-  } catch (error) {
-    console.error("Erro ao carregar bebidas:", error);
-    displayError('combinar_APIs', error);
+  let query;
+
+  for(let i = 0; i < categories.lenght; i++){
+    query = categories[i]
+
+    try {
+      const data = await fetchImages(query, 8);
+      displayImages(data.photos, 'combinar_APIs');
+    } 
+    
+    catch (error) {
+      console.error("Erro ao carregar bebidas:", error);
+      displayError('combinar_APIs', error);
+    }
   }
 }
 
