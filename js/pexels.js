@@ -1,6 +1,5 @@
-async function imagensBebidasComuns(){
-  const API_KEY = ;
-  
+async function categoriasImagens(){
+
   console.log("Iniciando carregamento de imagens...");
   
   try {
@@ -61,7 +60,7 @@ async function imagensBebidasComuns(){
       galeria.appendChild(img);
     });
 
-    console.log(`${data.photos.length} imagens adicionadas Ã  galeria`);
+    console.log(`${data.photos.length} imagens adicionadas à galeria`);
 
   } catch (error) {
     console.error("Erro detalhado ao carregar imagens:", error);
@@ -71,7 +70,7 @@ async function imagensBebidasComuns(){
     if (galeria) {
       galeria.innerHTML = `
         <div style="color: #ff4081; padding: 20px;">
-          <p>âŒ Erro ao carregar imagens da galeria</p>
+          <p>Erro ao carregar imagens da galeria</p>
           <p><small>Detalhes: ${error.message}</small></p>
         </div>
       `;
@@ -80,5 +79,5 @@ async function imagensBebidasComuns(){
 }
 
 setTimeout(() => {
-    imagensBebidasComuns();
+    categoriasImagens();
 }, 1000);
