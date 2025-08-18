@@ -75,38 +75,15 @@ function displayError(galleryId, error) {
 }
 
 // Funções para carregar imagens específicas
-async function imagensFastFood() {
-  console.log("Carregando imagens de fast food...");
-  
-  try {
-    const data = await fetchImages('hamburger', 8);
-    displayImages(data.photos, 'galeria');
-  } catch (error) {
-    console.error("Erro ao carregar fast food:", error);
-    displayError('galeria', error);
-  }
-}
-
 async function categoriasImagens() {
   console.log("Carregando imagens de bebidas...");
   
   try {
     const data = await fetchImages('soda', 8);
-    displayImages(data.photos, 'galeria2');
+    displayImages(data.photos, 'combinar_APIs');
   } catch (error) {
     console.error("Erro ao carregar bebidas:", error);
-    displayError('galeria2', error);
-  }
-}
-
-// Função genérica para buscar qualquer tipo de imagem
-async function buscarImagens(query, galleryId = 'galeria') {
-  try {
-    const data = await fetchImages(query, 8);
-    displayImages(data.photos, galleryId);
-  } catch (error) {
-    console.error(`Erro ao buscar ${query}:`, error);
-    displayError(galleryId, error);
+    displayError('combinar_APIs', error);
   }
 }
 
@@ -115,45 +92,9 @@ async function buscarImagens(query, galleryId = 'galeria') {
 document.addEventListener('DOMContentLoaded', function() {
   console.log("DOM carregado, iniciando aplicação...");
   
-  // Configurar evento do WhatsApp
-  const link_desabilitado = document.getElementById("linkZap");
-  if (link_desabilitado) {
-    link_desabilitado.addEventListener("click", reconher_evento);
-  }
-  
   // Carregar imagens após um delay
   setTimeout(() => {
     categoriasImagens();
   }, 1000);
   
-  // Configurar busca se existir
-  const busca = document.getElementById('busca');
-  if (busca) {
-    busca.addEventListener('input', function() {
-      const termo = this.value.toLowerCase();
-      const cards = document.querySelectorAll('.card');
-      
-      cards.forEach(card => {
-        const nome = card.querySelector('h3');
-        if (nome && nome.textContent.toLowerCase().includes(termo)) {
-          card.style.display = 'block';
-        } else {
-          card.style.display = 'none';
-        }
-      });
-    });
-  }
-
-  // Configurar busca de imagens dinâmica (se existir)
-  const imageBusca = document.getElementById('image-search');
-  if (imageBusca) {
-    imageBusca.addEventListener('keypress', function(e) {
-      if (e.key === 'Enter') {
-        const query = this.value.trim();
-        if (query) {
-          buscarImagens(query, 'galeria-dinamica');
-        }
-      }
-    });
-  }
-});
+  
